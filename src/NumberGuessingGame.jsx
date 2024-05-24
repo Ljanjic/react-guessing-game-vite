@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import GuessControl from './GuessControl';
 import GuessMessage from './GuessMessage';
 import GameOver from './GameOver';
@@ -40,9 +40,9 @@ const NumberGuessingGame = () => {
             )}
             {!isGameOver && (
                 <GuessMessage
-                    guess={this.state.latestGuess}
-                    numberToGuess={this.state.numberToGuess}
-                    numberOfGuesses={this.state.numberOfGuesses}
+                    guess={latestGuess}
+                    numberToGuess={numberToGuess}
+                    numberOfGuesses={numberOfGuesses}
                 />
             )}
         </div>
